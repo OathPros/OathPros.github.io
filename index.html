@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#110f19" />
   <meta name="description" content="Apps, tools, prototypes and interactive presentations by Luke Gagliardi." />
   <title>Luke Gagliardi / Project Index</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <style>
     :root{
       color-scheme:dark;
@@ -155,6 +156,7 @@ window.PROJECTS = [
   {repo:'AI-York-Demo', title:'AI @ York — Demo', category:'Websites', description:'A prototype web experience for institutional AI guidance.', tags:['AI','website','prototype'], polish:94, updated:'2026-11-18', image:null, skin:'web'},
   {repo:'AI-YORK_CMS_UI', title:'AI @ York Studio', category:'Apps', description:'A form-based content management interface concept.', tags:['CMS','governance','editor'], polish:92, updated:'2026-11-18', image:null, skin:'studio'},
   {repo:'york-ai-atlas', title:'AI Content Atlas', category:'Tools', description:'Interactive audit of AI content and information needs.', tags:['AI','information architecture','research'], polish:91, updated:'2026-11-15', image:null, skin:'atlas'},
+  {repo:'waymark-atlas', title:'Waymark Atlas', category:'Apps', description:'An interactive fantasy atlas with explorable maps, regions and linked levels.', tags:['maps','interactive','Cloudflare'], polish:88, updated:'2026-11-05', image:null, skin:'atlas', liveUrl:'https://waymark-atlas-20261105.luke-gagliardi.workers.dev/?map=ashenmere&level=upper&variant=day', publicSource:false},
   {repo:'NEXUS', title:'NEXUS', category:'Apps', description:'A service knowledge graph and relationship explorer.', tags:['ontology','services','graph'], polish:89, updated:'2026-10-19', image:null, skin:'graph'},
   {repo:'MARS_DEMO', title:'MARS Demo', category:'Presentations', description:'Interactive presentation of an AI development platform.', tags:['AI','platform','demo'], polish:87, updated:'2026-11-11', image:null, skin:'slides'},
   {repo:'KCS', title:'KCS', category:'Apps', description:'Knowledge-centered service guidance and enablement.', tags:['knowledge','support','ITSM'], polish:85, updated:'2026-11-06', image:null, skin:'knowledge'},
@@ -163,17 +165,17 @@ window.PROJECTS = [
   {repo:'AUTO-TRIAGE-PRESENTATION', title:'Auto-Triage', category:'Presentations', description:'An interactive overview of service ticket automation.', tags:['automation','operations','presentation'], polish:81, updated:'2026-10-30', image:null, skin:'metrics'},
   {repo:'Capture', title:'Capture', category:'Apps', description:'A prototype for capturing workflows as knowledge.', tags:['knowledge','desktop','automation'], polish:80, updated:'2026-11-11', image:null, skin:'capture'},
   {repo:'txt2speech', title:'Text to Speech', category:'Apps', description:'Text-to-voice software experiment.', tags:['speech','AI','audio'], polish:79, updated:'2026-11-10', image:null, skin:'audio'},
-  {repo:'Halo-Forge-UI', title:'Halo Forge', category:'Apps', description:'A knowledge-authoring interface exploration.', tags:['ITSM','knowledge','UI'], polish:77, updated:'2026-04-16', image:null, skin:'knowledge'},
+  {repo:'Halo-Forge-UI', title:'Halo Forge', category:'Apps', description:'A knowledge-authoring interface exploration.', tags:['ITSM','knowledge','UI'], polish:77, updated:'2026-04-16', image:null, skin:'knowledge', visible:false},
   {repo:'mars-site-personal', title:'MARS Platform', category:'Websites', description:'A web experience exploring the MARS platform.', tags:['platform','AI','website'], polish:74, updated:'2026-10-15', image:null, skin:'web'},
   {repo:'AI-Inventory', title:'AI Inventory', category:'Tools', description:'An organized catalogue of AI-related resources.', tags:['AI','catalogue','search'], polish:72, updated:'2026-06-04', image:null, skin:'inventory'},
   {repo:'UAT', title:'Knowledge UAT', category:'Tools', description:'A prototype for knowledge-base testing and review.', tags:['testing','ITSM','quality'], polish:70, updated:'2026-10-22', image:null, skin:'checklist'},
   {repo:'FORGE-ALPHA-UI-TEST', title:'Forge Alpha UI', category:'Experiments', description:'An early-stage knowledge authoring interface.', tags:['UI','experiment','knowledge'], polish:68, updated:'2026-04-16', image:null, skin:'studio'},
-  {repo:'computer-purchase', title:'Computer Purchase', category:'Apps', description:'A prototype purchasing workflow interface.', tags:['procurement','workflow'], polish:66, updated:'2026-04-17', image:null, skin:'web'},
+  {repo:'computer-purchase', title:'Computer Purchase', category:'Apps', description:'A prototype purchasing workflow interface.', tags:['procurement','workflow'], polish:66, updated:'2026-04-17', image:null, skin:'web', visible:false},
   {repo:'IKNOWWEB', title:'I Know Web', category:'Websites', description:'An experimental web experience.', tags:['experiment','web'], polish:64, updated:'2026-05-23', image:null, skin:'web'},
   {repo:'Overland-Map-Maker', title:'Overland Map Maker', category:'Tools', description:'A map-making interface experiment.', tags:['maps','creative','editor'], polish:62, updated:'2025-10-07', image:null, skin:'atlas'},
-  {repo:'Map-Marker', title:'Map Marker', category:'Tools', description:'An experimental map annotation utility.', tags:['maps','annotations'], polish:60, updated:'2025-10-10', image:null, skin:'atlas'},
+  {repo:'Map-Marker', title:'Map Marker', category:'Tools', description:'An experimental map annotation utility.', tags:['maps','annotations'], polish:60, updated:'2025-10-10', image:null, skin:'atlas', visible:false},
   {repo:'BEYOND-D', title:'Beyond D', category:'Experiments', description:'A programming experiment and prototype.', tags:['experimental','Python'], polish:53, updated:'2026-10-31', image:null, skin:'code'},
-  {repo:'D-CB', title:'D-CB', category:'Experiments', description:'An experimental browser-based project.', tags:['experiment','web'], polish:51, updated:'2026-07-05', image:null, skin:'code'},
+  {repo:'D-CB', title:'D-CB', category:'Experiments', description:'An experimental browser-based project.', tags:['experiment','web'], polish:51, updated:'2026-07-05', image:null, skin:'code', visible:false},
   {repo:'COMP3', title:'COMP3', category:'Experiments', description:'A computational project and experiment.', tags:['Python','experiment'], polish:49, updated:'2026-04-17', image:null, skin:'metrics'},
   /* Published repositories that may not belong on a public professional showcase */
   {repo:'Daniel_Colleen', title:'Daniel / Colleen', category:'Experiments', description:'Personal project.', tags:['personal'], polish:10, updated:'2026-10-03', image:null, skin:'web', visible:false},
@@ -221,7 +223,7 @@ window.PROJECTS = [
             <div class="kicker"><span>${esc(p.category.toUpperCase())}</span><span class="updated">${esc((p.updated||'').slice(0,7))}</span></div>
             <h2 class="project-title" title="${esc(p.title)}">${esc(p.title)}</h2>
             <p class="project-description">${esc(p.description)}</p>
-            <div class="bottom"><div class="tags">${tags}</div><div style="display:flex;gap:12px;align-items:center"><a class="launch" href="${esc(repo)}" target="_blank" rel="noopener noreferrer" aria-label="View source for ${esc(p.title)}">CODE &gt;</a><a class="launch" href="${esc(live)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(p.title)}">OPEN &gt;</a></div></div>
+            <div class="bottom"><div class="tags">${tags}</div><div style="display:flex;gap:12px;align-items:center">${p.publicSource===false ? "" : `<a class="launch" href="${esc(repo)}" target="_blank" rel="noopener noreferrer" aria-label="View source for ${esc(p.title)}">CODE &gt;</a>`}<a class="launch" href="${esc(live)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(p.title)}">OPEN &gt;</a></div></div>
           </div>
         </article>`;
       }
