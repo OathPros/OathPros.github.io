@@ -26,7 +26,6 @@
     .masthead{border-bottom:1px solid var(--line)}
     .topline{height:76px;display:flex;justify-content:space-between;align-items:center;gap:18px}
     .identity{display:flex;align-items:center;gap:15px;min-width:0}
-    .monogram{font-size:14px;background:var(--orange);color:#19121b;display:grid;place-items:center;font-weight:700;width:39px;height:39px;border-radius:5px;flex-shrink:0}
     .identity-copy{display:flex;flex-direction:column;line-height:1.5;gap:1px;min-width:0}
     .identity-copy strong{font-size:14px;font-weight:600;letter-spacing:.01em;white-space:nowrap}
     .identity-copy span{font-size:11px;color:var(--muted);letter-spacing:.02em}
@@ -62,7 +61,9 @@
     .topic[aria-pressed="true"],.tag[aria-pressed="true"]{border-color:var(--orange);color:var(--orange-soft);background:#3c2531}
     .clear-tag{color:var(--orange-soft)}
     .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-    .project{background:var(--panel);border:1px solid var(--line);border-radius:7px;overflow:hidden;min-width:0;display:flex;flex-direction:column;transition:transform .18s ease,border-color .18s ease,background .18s ease}
+    .project{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:7px;overflow:hidden;min-width:0;display:flex;flex-direction:column;cursor:pointer;transition:transform .18s ease,border-color .18s ease,background .18s ease}
+    .card-hit-area{position:absolute;inset:0;z-index:3;border-radius:inherit}
+    .card-hit-area:focus-visible{outline:2px solid var(--focus);outline-offset:-3px}
     .project:hover{transform:translateY(-3px);border-color:#8e543a;background:#221b30}
     .project:focus-within{border-color:var(--orange)}
     .preview{height:181px;position:relative;display:flex;align-items:stretch;justify-content:stretch;background:#171322;overflow:hidden;border-bottom:1px solid var(--line)}
@@ -97,7 +98,7 @@
     .project-title{font-size:15px;font-weight:600;letter-spacing:-.02em;margin:0 0 5px;line-height:1.4;overflow-wrap:anywhere}
     .project-description{color:var(--muted);font-size:11px;line-height:1.65;margin:0 0 13px}
     .bottom{margin-top:auto;padding-top:11px;border-top:1px solid #40354f;display:flex;flex-direction:column;align-items:stretch;gap:11px}
-    .tags{display:flex;gap:5px;min-width:0;flex-wrap:wrap}.tags button{font-size:9px;color:#a495b9;border:1px solid #504261;padding:3px 6px;border-radius:3px;background:transparent;cursor:pointer}.project-links{display:flex;gap:12px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+    .tags{display:flex;gap:5px;min-width:0;flex-wrap:wrap}.tags button{position:relative;z-index:4;font-size:9px;color:#a495b9;border:1px solid #504261;padding:3px 6px;border-radius:3px;background:transparent;cursor:pointer}.project-links{display:flex;gap:12px;align-items:center;justify-content:flex-end;flex-wrap:wrap}.project-links a{position:relative;z-index:4}
     .launch{white-space:nowrap;font-size:10px;color:var(--orange-soft);font-weight:600}.launch:hover{text-decoration:underline}
     .project:focus-within .launch,.project:hover .launch{color:#ffad78}
     .empty{border:1px dashed var(--line);padding:65px 20px;text-align:center;color:var(--muted);border-radius:6px}
@@ -113,7 +114,6 @@
   <header class="masthead">
     <div class="shell topline">
       <a class="identity" href="./" aria-label="Luke Gagliardi home">
-        <span class="monogram">LG</span>
         <span class="identity-copy"><strong>LUKE GAGLIARDI</strong><span>SOFTWARE / SYSTEMS / EXPERIMENTS</span></span>
       </a>
       <nav class="head-links" aria-label="Main navigation">
@@ -183,7 +183,7 @@ window.PROJECTS = [
   {repo:'UAT', title:'Knowledge UAT', category:'Tools', description:'A prototype for knowledge-base testing and review.', tags:['testing','ITSM','quality'], polish:70, updated:'2026-10-22', image:null, skin:'checklist'},
   {repo:'FORGE-ALPHA-UI-TEST', title:'Forge Alpha UI', category:'Experiments', description:'An early-stage knowledge authoring interface.', tags:['UI','experiment','knowledge'], polish:68, updated:'2026-04-16', image:null, skin:'studio'},
   {repo:'computer-purchase', title:'Computer Purchase', category:'Apps', description:'A prototype purchasing workflow interface.', tags:['procurement','workflow'], polish:66, updated:'2026-04-17', image:null, skin:'web', visible:false},
-  {repo:'IKNOWWEB', title:'I Know Web', category:'Websites', description:'An experimental web experience.', tags:['experiment','website'], polish:64, updated:'2026-05-23', image:null, skin:'web'},
+  {repo:'IKNOWWEB', title:'I Know Web', category:'Websites', description:'An experimental web experience.', tags:['experiment','website'], polish:64, updated:'2026-05-23', image:null, skin:'web', visible:false},
   {repo:'Overland-Map-Maker', title:'Overland Map Maker', category:'Tools', description:'A map-making interface experiment.', tags:['maps','creative','editor'], polish:62, updated:'2025-10-07', image:null, skin:'atlas'},
   {repo:'Map-Marker', title:'Map Marker', category:'Tools', description:'An experimental map annotation utility.', tags:['maps','annotations'], polish:60, updated:'2025-10-10', image:null, skin:'atlas', visible:false},
   {repo:'BEYOND-D', title:'Beyond D', category:'Experiments', description:'A programming experiment and prototype.', tags:['experimental','Python'], polish:53, updated:'2026-10-31', image:null, skin:'code'},
@@ -231,6 +231,7 @@ window.PROJECTS = [
         const repo=`https://github.com/OathPros/${slug(p.repo)}`;
         const tags=(p.tags||[]).slice(0,3).map(t=>`<button class="tag" type="button" data-tag="${esc(t)}" aria-pressed="${activeTag===t}">#${esc(t)}</button>`).join('');
         return `<article class="project">
+          <a class="card-hit-area" href="${esc(live)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(p.title)} website"></a>
           ${preview(p)}
           <div class="info">
             <div class="kicker"><span>${esc(p.category.toUpperCase())}</span><span class="updated">${esc((p.updated||'').slice(0,7))}</span></div>
