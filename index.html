@@ -51,6 +51,16 @@
     .filter:hover{background:var(--panel2);color:var(--ink)}
     .filter[aria-pressed="true"]{color:var(--orange-soft);background:#3c2531;border-color:#865038}
     .sort{height:35px;min-width:180px;margin-left:auto;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:0 10px;max-width:100%}
+    .project-groups{display:flex;flex-direction:column;gap:34px}
+    .group-header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+    .group-header h2{margin:0;font-size:15px;font-weight:600;letter-spacing:-.01em}
+    .group-header span{color:var(--weak);font-size:10px;white-space:nowrap}
+    .tag-bar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:11px}
+    .tag-label{font-size:9px;letter-spacing:.08em;color:var(--weak);margin-right:5px}
+    .topic{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:4px;padding:4px 9px;font-size:10px}
+    .topic:hover,.tag:hover{border-color:var(--orange);color:var(--ink)}
+    .topic[aria-pressed="true"],.tag[aria-pressed="true"]{border-color:var(--orange);color:var(--orange-soft);background:#3c2531}
+    .clear-tag{color:var(--orange-soft)}
     .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
     .project{background:var(--panel);border:1px solid var(--line);border-radius:7px;overflow:hidden;min-width:0;display:flex;flex-direction:column;transition:transform .18s ease,border-color .18s ease,background .18s ease}
     .project:hover{transform:translateY(-3px);border-color:#8e543a;background:#221b30}
@@ -84,10 +94,10 @@
     .info{padding:16px 16px 15px;display:flex;flex:1;flex-direction:column;min-height:153px}
     .kicker{display:flex;justify-content:space-between;gap:8px;color:var(--orange-soft);font-size:10px;letter-spacing:.04em;margin-bottom:5px}
     .kicker .updated{color:var(--weak);font-size:10px}
-    .project-title{font-size:15px;font-weight:600;letter-spacing:-.02em;margin:0 0 5px;line-height:1.4;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
-    .project-description{color:var(--muted);font-size:11px;line-height:1.65;margin:0 0 13px;min-height:36px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-    .bottom{margin-top:auto;padding-top:11px;border-top:1px solid #40354f;display:flex;justify-content:space-between;align-items:center;gap:10px}
-    .tags{display:flex;gap:5px;min-width:0;overflow:hidden;white-space:nowrap}.tags span{font-size:9px;color:#a495b9;border:1px solid #504261;padding:2px 5px;border-radius:3px}
+    .project-title{font-size:15px;font-weight:600;letter-spacing:-.02em;margin:0 0 5px;line-height:1.4;overflow-wrap:anywhere}
+    .project-description{color:var(--muted);font-size:11px;line-height:1.65;margin:0 0 13px}
+    .bottom{margin-top:auto;padding-top:11px;border-top:1px solid #40354f;display:flex;flex-direction:column;align-items:stretch;gap:11px}
+    .tags{display:flex;gap:5px;min-width:0;flex-wrap:wrap}.tags button{font-size:9px;color:#a495b9;border:1px solid #504261;padding:3px 6px;border-radius:3px;background:transparent;cursor:pointer}.project-links{display:flex;gap:12px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
     .launch{white-space:nowrap;font-size:10px;color:var(--orange-soft);font-weight:600}.launch:hover{text-decoration:underline}
     .project:focus-within .launch,.project:hover .launch{color:#ffad78}
     .empty{border:1px dashed var(--line);padding:65px 20px;text-align:center;color:var(--muted);border-radius:6px}
@@ -132,11 +142,11 @@
           <option value="polish">Polished first</option>
           <option value="updated">Recently updated</option>
           <option value="title">Name A–Z</option>
-          <option value="category">Type A–Z</option>
         </select>
       </div>
+      <div id="tag-bar" class="tag-bar" aria-label="Filter by topic"></div>
     </section>
-    <section id="grid" class="grid" aria-label="Project gallery"></section>
+    <section id="grid" class="project-groups" aria-label="Project gallery"></section>
     <div id="empty" class="empty" hidden>No projects match these filters. Try a different search.</div>
   </main>
   <footer><div class="shell" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap"><span>© 2026 LUKE GAGLIARDI / BUILT TO BE USED</span><span><a href="https://github.com/OathPros" target="_blank" rel="noopener noreferrer">SOURCE ON GITHUB &gt;</a></span></div></footer>
@@ -152,6 +162,8 @@
  * Place real preview screenshots at assets/previews/<repo>.webp and set image.
  */
 window.PROJECTS = [
+  {repo:'stryfebools', title:'STRYFEBOOLS', category:'Artist Sites', description:'Independent hip-hop artist website with cinematic visuals, music and releases.', tags:['music','artist website','hip-hop'], polish:91, updated:'2026-11-23', image:null, skin:'audio', liveUrl:'https://stryfebools.com/'},
+  {repo:'AOB', title:'Apple of Basilisk', category:'Artist Sites', description:'Gothic doom-metal band website with interactive burning photographs and releases.', tags:['music','artist website','doom metal'], polish:92, updated:'2026-11-23', image:null, skin:'web', liveUrl:'https://appleofbasilisk.com/', publicSource:false},
   {repo:'Flowboard', title:'Flowboard', category:'Tools', description:'A visual editor for diagrams and connected workflows.', tags:['diagrams','editor','productivity'], polish:96, updated:'2026-11-17', image:null, skin:'flow'},
   {repo:'AI-York-Demo', title:'AI @ York — Demo', category:'Websites', description:'A prototype web experience for institutional AI guidance.', tags:['AI','website','prototype'], polish:94, updated:'2026-11-18', image:null, skin:'web'},
   {repo:'AI-YORK_CMS_UI', title:'AI @ York Studio', category:'Apps', description:'A form-based content management interface concept.', tags:['CMS','governance','editor'], polish:92, updated:'2026-11-18', image:null, skin:'studio'},
@@ -185,12 +197,13 @@ window.PROJECTS = [
 ];
 
   </script>
-  <script src="projects.js"></script>
   <script>
     (function(){
       'use strict';
       const projectData=(window.PROJECTS||[]).filter(p=>p.visible!==false);
-      const categories=['All','Apps','Tools','Websites','Presentations','Experiments'];
+      const categories=['All','Artist Sites','Apps','Tools','Websites','Presentations','Experiments'];
+      const featuredTags=['AI','knowledge','music','maps','automation','editor','web','prototype'];
+      let activeTag=null;
       let active='All';
       const $=s=>document.querySelector(s);
       const esc=(v)=>String(v??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
@@ -216,29 +229,59 @@ window.PROJECTS = [
       function card(p){
         const live=p.liveUrl||`https://lukegagliardi.com/${slug(p.repo)}/`;
         const repo=`https://github.com/OathPros/${slug(p.repo)}`;
-        const tags=(p.tags||[]).slice(0,2).map(t=>`<span>${esc(t)}</span>`).join('');
+        const tags=(p.tags||[]).slice(0,3).map(t=>`<button class="tag" type="button" data-tag="${esc(t)}" aria-pressed="${activeTag===t}">#${esc(t)}</button>`).join('');
         return `<article class="project">
           ${preview(p)}
           <div class="info">
             <div class="kicker"><span>${esc(p.category.toUpperCase())}</span><span class="updated">${esc((p.updated||'').slice(0,7))}</span></div>
             <h2 class="project-title" title="${esc(p.title)}">${esc(p.title)}</h2>
             <p class="project-description">${esc(p.description)}</p>
-            <div class="bottom"><div class="tags">${tags}</div><div style="display:flex;gap:12px;align-items:center">${p.publicSource===false ? "" : `<a class="launch" href="${esc(repo)}" target="_blank" rel="noopener noreferrer" aria-label="View source for ${esc(p.title)}">CODE &gt;</a>`}<a class="launch" href="${esc(live)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(p.title)}">OPEN &gt;</a></div></div>
+            <div class="bottom"><div class="tags">${tags}</div><div class="project-links">${p.publicSource===false ? "" : `<a class="launch" href="${esc(repo)}" target="_blank" rel="noopener noreferrer" aria-label="View source for ${esc(p.title)}">CODE &gt;</a>`}<a class="launch" href="${esc(live)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(p.title)}">OPEN &gt;</a></div></div>
           </div>
         </article>`;
       }
       function render(){
-        const q=$('#search').value.toLowerCase().trim();const sort=$('#sort').value;
-        const filtered=projectData.filter(p=>(active==='All'||p.category===active)&&(`${p.title} ${p.repo} ${p.description} ${(p.tags||[]).join(' ')}`).toLowerCase().includes(q));
+        const q=$('#search').value.toLowerCase().trim();
+        const sort=$('#sort').value;
+        const filtered=projectData.filter(p=>
+          (active==='All'||p.category===active) &&
+          (!activeTag||(p.tags||[]).some(t=>t.toLowerCase()===activeTag.toLowerCase())) &&
+          (`${p.title} ${p.repo} ${p.description} ${(p.tags||[]).join(' ')}`).toLowerCase().includes(q)
+        );
         filtered.sort((a,b)=>{
           if(sort==='polish')return (b.polish||0)-(a.polish||0)||a.title.localeCompare(b.title);
           if(sort==='updated')return (b.updated||'').localeCompare(a.updated||'')||a.title.localeCompare(b.title);
-          if(sort==='category')return a.category.localeCompare(b.category)||a.title.localeCompare(b.title);
           return a.title.localeCompare(b.title);
         });
-        $('#grid').innerHTML=filtered.map(card).join('');
+        if(active==='All'){
+          $('#grid').innerHTML=categories.slice(1).map(c=>{
+            const items=filtered.filter(p=>p.category===c);
+            if(!items.length)return '';
+            return '<section class="project-group" aria-label="'+esc(c)+'">'+
+              '<div class="group-header"><h2>'+esc(c)+'</h2><span>'+items.length+' PROJECT'+(items.length===1?'':'S')+'</span></div>'+
+              '<div class="grid">'+items.map(card).join('')+'</div></section>';
+          }).join('');
+        }else{
+          $('#grid').innerHTML='<div class="grid">'+filtered.map(card).join('')+'</div>';
+        }
+        $('#grid').querySelectorAll('.tag').forEach(btn=>btn.addEventListener('click',()=>{
+          activeTag=activeTag===btn.dataset.tag?null:btn.dataset.tag;
+          render();
+        }));
         $('#empty').hidden=filtered.length!==0;
         $('#count').textContent=`${String(filtered.length).padStart(2,'0')} / ${String(projectData.length).padStart(2,'0')} PROJECTS`;
+        renderTags();
+      }
+      function renderTags(){
+        $('#tag-bar').innerHTML='<span class="tag-label">TOPICS</span>'+
+          featuredTags.map(t=>'<button type="button" class="topic" data-tag="'+esc(t)+'" aria-pressed="'+(activeTag===t)+'">#'+esc(t)+'</button>').join('')+
+          (activeTag?'<button type="button" class="topic clear-tag" data-clear-tag>Clear tag ×</button>':'');
+        $('#tag-bar').querySelectorAll('[data-tag]').forEach(btn=>btn.addEventListener('click',()=>{
+          activeTag=activeTag===btn.dataset.tag?null:btn.dataset.tag;
+          render();
+        }));
+        const clear=$('#tag-bar').querySelector('[data-clear-tag]');
+        if(clear)clear.addEventListener('click',()=>{activeTag=null;render()});
       }
       function renderFilters(){
         $('#filters').innerHTML=categories.map(c=>`<button type="button" class="filter" data-filter="${c}" aria-pressed="${c===active}">${c.toUpperCase()}</button>`).join('');
