@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#110e17">
+  <meta name="description" content="Applications, tools, artist websites and other digital dabblings">
+  <title>Cool stuff for cool people</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./assets/site.css">
+  <script src="./assets/site.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <a class="name" href="./">Luke Gagliardi</a>
+      <nav aria-label="Main">
+        <a href="#index">Project index</a>
+        <a class="profile-link" href="https://github.com/OathPros">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell" id="main" tabindex="-1">
+    <div class="intro">
+      <h1>Cool stuff<br class="mobile-break"> for cool people</h1>
+      <p>Applications, tools, artist websites and other digital dabblings</p>
+    </div>
+
+    <section aria-labelledby="selected">
+      <div class="work-heading">
+        <h2 id="selected">Selected work</h2>
+      </div>
+      <div class="work">
+$features
+      </div>
+$more_features
+    </section>
+
+    <section class="index" id="index" aria-labelledby="index-title" tabindex="-1">
+      <div class="index-heading">
+        <h2 id="index-title">Project index</h2>
+        <p id="result-count" role="status" aria-atomic="true">$count projects</p>
+      </div>
+      <form class="filters" id="filters" role="search" aria-label="Filter the project index" hidden>
+        <label class="search-label">Search
+          <input type="search" name="q" placeholder="Name, description or topic" autocomplete="off">
+        </label>
+        <label>Category
+          <select name="category">
+            <option value="">All categories</option>
+$categories
+          </select>
+        </label>
+        <label>Topic
+          <select name="topic">
+            <option value="">All topics</option>
+$topics
+          </select>
+        </label>
+        <label>View
+          <select name="view">
+            <option value="">All projects</option>
+            <option value="featured">Selected work</option>
+            <option value="recent">Recent source updates</option>
+          </select>
+        </label>
+        <button type="reset">Reset filters</button>
+      </form>
+      <ul class="project-list" id="grid" role="list">
+$rows
+      </ul>
+      <p class="empty" id="empty" hidden>No matches — try another search or reset the filters</p>
+    </section>
+  </main>
+  <footer class="shell footer">
+    <span>© Luke Gagliardi</span>
+    <a href="https://github.com/OathPros">GitHub</a>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>

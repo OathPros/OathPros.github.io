@@ -1,0 +1,11 @@
+# Keep the Pages document root limited to the public application.
+exclude:
+  - tools
+  - references
+  - AGENTS.md
+  - PROJECT.md
+  - DESIGN.md
+  - ARCHITECTURE.md
+  - STATUS.md
+  - DECISIONS.md
+  - DEVKIT-FEEDBACK.md

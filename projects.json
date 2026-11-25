@@ -1,0 +1,371 @@
+[
+  {
+    "id": "ai-york-studio",
+    "title": "AI @ York Studio",
+    "description": "A form-based content management interface concept",
+    "category": "institutional",
+    "topics": [
+      "Content management",
+      "Governance",
+      "Editors"
+    ],
+    "launch": "https://lukegagliardi.com/AI-YORK_CMS_UI/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/AI-YORK_CMS_UI"
+  },
+  {
+    "id": "ai-content-atlas",
+    "title": "AI Content Atlas",
+    "description": "An interactive audit of AI content and information needs",
+    "category": "institutional",
+    "topics": [
+      "AI",
+      "Information architecture",
+      "Research"
+    ],
+    "launch": "https://lukegagliardi.com/york-ai-atlas/#view=inventory",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/york-ai-atlas",
+    "update": {
+      "date": "2026-11-18",
+      "evidence": "https://github.com/OathPros/york-ai-atlas/commit/d4eaa9d97a78720ea6fc3b5ce55d6c1dbed64cfe"
+    }
+  },
+  {
+    "id": "ai-inventory",
+    "title": "AI Inventory",
+    "description": "A searchable catalogue of AI resources",
+    "category": "tools",
+    "topics": [
+      "AI",
+      "Catalogues"
+    ],
+    "launch": "https://lukegagliardi.com/AI-Inventory/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/AI-Inventory"
+  },
+  {
+    "id": "ai-york-demo",
+    "title": "AI@YORK",
+    "description": "A prototype for finding institutional AI guidance, tools and support",
+    "category": "institutional",
+    "topics": [
+      "AI",
+      "Information architecture"
+    ],
+    "launch": "https://lukegagliardi.com/AI-York-Demo/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/AI-York-Demo",
+    "update": {
+      "date": "2026-11-24",
+      "evidence": "https://github.com/OathPros/AI-York-Demo/commit/c94e1ba38cff7d2d1039cf59ac44f4634c006b0a"
+    },
+    "featured": 3,
+    "preview": {
+      "path": "assets/previews/ai-york-demo.webp",
+      "alt": "The public AI at York demo task checker with work, study, teaching and research options",
+      "width": 583,
+      "height": 312
+    }
+  },
+  {
+    "id": "apple-of-basilisk",
+    "title": "Apple of Basilisk",
+    "description": "A doom-metal band site with releases and interactive, burning photographs",
+    "category": "artist",
+    "topics": [
+      "Music",
+      "Doom metal"
+    ],
+    "launch": "https://apple-of-basilisk.pages.dev/",
+    "hosting": "cloudflare",
+    "featured": 6,
+    "preview": {
+      "path": "assets/previews/apple-of-basilisk.webp",
+      "alt": "A framed band photograph suspended against a dark stone background",
+      "width": 800,
+      "height": 570
+    }
+  },
+  {
+    "id": "auto-triage",
+    "title": "Auto-Triage",
+    "description": "An interactive overview of service ticket automation",
+    "category": "presentations",
+    "topics": [
+      "Automation",
+      "Services"
+    ],
+    "launch": "https://lukegagliardi.com/AUTO-TRIAGE-PRESENTATION/#slide-01",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/AUTO-TRIAGE-PRESENTATION"
+  },
+  {
+    "id": "beyond-d",
+    "title": "Beyond D",
+    "description": "A browser tool for assembling tabletop adventures and exporting them to PDF",
+    "category": "experiments",
+    "topics": [
+      "Worldbuilding",
+      "PDF"
+    ],
+    "launch": "https://lukegagliardi.com/BEYOND-D/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/BEYOND-D",
+    "update": {
+      "date": "2026-10-31",
+      "evidence": "https://github.com/OathPros/BEYOND-D/commit/59e1bcc4a4da34e15b8c61af57bb2c9702b809ea"
+    }
+  },
+  {
+    "id": "capture",
+    "title": "Capture",
+    "description": "A Windows tool for turning recorded workflows into step-by-step documentation",
+    "category": "tools",
+    "topics": [
+      "Knowledge",
+      "Workflows",
+      "Windows"
+    ],
+    "launch": "https://dxluke.com/capture/",
+    "hosting": "custom",
+    "source": "https://github.com/OathPros/Capture",
+    "featured": 2,
+    "preview": {
+      "path": "assets/previews/capture.webp",
+      "alt": "Capture application logo",
+      "width": 96,
+      "height": 96
+    }
+  },
+  {
+    "id": "comp3",
+    "title": "COMP3",
+    "description": "A desktop-style interface exploring human interface guidelines",
+    "category": "experiments",
+    "topics": [
+      "Interface design",
+      "Documentation"
+    ],
+    "launch": "https://lukegagliardi.com/COMP3/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/COMP3"
+  },
+  {
+    "id": "flowboard",
+    "title": "Flowboard",
+    "description": "Draw flowcharts visually and work with the diagram source side by side",
+    "category": "tools",
+    "topics": [
+      "Diagrams",
+      "Editors",
+      "Workflows"
+    ],
+    "launch": "https://lukegagliardi.com/Flowboard/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/Flowboard",
+    "update": {
+      "date": "2026-11-17",
+      "evidence": "https://github.com/OathPros/Flowboard/commit/d2b9a45275deefd4b442d0b2bbf8cb2a14564233"
+    },
+    "featured": 5,
+    "preview": {
+      "path": "assets/previews/flowboard.webp",
+      "alt": "A branching flowchart on the Flowboard diagram canvas",
+      "width": 485,
+      "height": 501
+    }
+  },
+  {
+    "id": "forge-alpha",
+    "title": "Forge Alpha UI",
+    "description": "An early-stage knowledge authoring interface",
+    "category": "experiments",
+    "topics": [
+      "Knowledge",
+      "Editors"
+    ],
+    "launch": "https://lukegagliardi.com/FORGE-ALPHA-UI-TEST/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/FORGE-ALPHA-UI-TEST"
+  },
+  {
+    "id": "html-editor",
+    "title": "HTML Editor",
+    "description": "Edit HTML and see the rendered page directly in the browser",
+    "category": "tools",
+    "topics": [
+      "HTML",
+      "Editors"
+    ],
+    "launch": "https://lukegagliardi.com/HTML_EDITOR/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/HTML_EDITOR",
+    "update": {
+      "date": "2026-10-29",
+      "evidence": "https://github.com/OathPros/HTML_EDITOR/commit/af566cc4d7f2049589bca6d287076c97c4e4fb47"
+    }
+  },
+  {
+    "id": "kcs",
+    "title": "KCS",
+    "description": "An interactive presentation on piloting a knowledge base and supporting service teams",
+    "category": "presentations",
+    "topics": [
+      "Knowledge",
+      "Services"
+    ],
+    "launch": "https://lukegagliardi.com/KCS/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/KCS"
+  },
+  {
+    "id": "knowledge-uat",
+    "title": "Knowledge UAT",
+    "description": "A prototype for testing and reviewing knowledge-base content",
+    "category": "institutional",
+    "topics": [
+      "Knowledge",
+      "Testing",
+      "Services"
+    ],
+    "launch": "https://lukegagliardi.com/UAT/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/UAT"
+  },
+  {
+    "id": "mars-demo",
+    "title": "MARS Demo",
+    "description": "An interactive presentation about an AI development platform",
+    "category": "presentations",
+    "topics": [
+      "AI",
+      "Platforms"
+    ],
+    "launch": "https://lukegagliardi.com/MARS_DEMO/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/MARS_DEMO",
+    "update": {
+      "date": "2026-11-11",
+      "evidence": "https://github.com/OathPros/MARS_DEMO/commit/70b17a33e5c0150f71da2036339a32252b38e34d"
+    }
+  },
+  {
+    "id": "mars-platform",
+    "title": "MARS Platform",
+    "description": "A website exploring the MARS development platform",
+    "category": "apps",
+    "topics": [
+      "AI",
+      "Platforms"
+    ],
+    "launch": "https://lukegagliardi.ca/",
+    "hosting": "custom",
+    "source": "https://github.com/OathPros/mars-site-personal"
+  },
+  {
+    "id": "new-york-uit",
+    "title": "New York / UIT",
+    "description": "A concept for navigating an institutional IT services website",
+    "category": "institutional",
+    "topics": [
+      "Services",
+      "Information architecture"
+    ],
+    "launch": "https://lukegagliardi.com/2IT_New_YU_New_York_Manhattan_Project_/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/2IT_New_YU_New_York_Manhattan_Project_"
+  },
+  {
+    "id": "nexus",
+    "title": "NEXUS",
+    "description": "Explore relationships in a service knowledge graph",
+    "category": "apps",
+    "topics": [
+      "Knowledge",
+      "Services",
+      "Graphs"
+    ],
+    "launch": "https://lukegagliardi.com/NEXUS/#slide-1",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/NEXUS"
+  },
+  {
+    "id": "nodeboard",
+    "title": "Nodeboard",
+    "description": "A collaborative graph whiteboard for sketching ideas and mapping relationships",
+    "category": "tools",
+    "topics": [
+      "Diagrams",
+      "Graphs",
+      "Editors"
+    ],
+    "launch": "https://nodeboard-live.luke-gagliardi.workers.dev/",
+    "hosting": "cloudflare",
+    "source": "https://github.com/OathPros/nodeboard",
+    "featured": 1,
+    "preview": {
+      "path": "assets/previews/nodeboard.webp",
+      "alt": "Color-coded nodes and labeled connections on a Nodeboard canvas",
+      "width": 1095,
+      "height": 540
+    }
+  },
+  {
+    "id": "overland-map-maker",
+    "title": "Overland Map Maker",
+    "description": "A dice-driven experiment for drawing paths across an overland map",
+    "category": "experiments",
+    "topics": [
+      "Maps",
+      "Worldbuilding"
+    ],
+    "launch": "https://lukegagliardi.com/Overland-Map-Maker/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/Overland-Map-Maker"
+  },
+  {
+    "id": "stryfebools",
+    "title": "STRYFEBOOLS",
+    "description": "Independent hip-hop releases, music videos and artist information",
+    "category": "artist",
+    "topics": [
+      "Music",
+      "Hip-hop"
+    ],
+    "launch": "https://stryfebools.com/",
+    "hosting": "custom"
+  },
+  {
+    "id": "text-to-speech",
+    "title": "Text to Speech",
+    "description": "A text-to-voice software experiment",
+    "category": "experiments",
+    "topics": [
+      "Audio",
+      "AI"
+    ],
+    "launch": "https://lukegagliardi.com/txt2speech/",
+    "hosting": "github-pages",
+    "source": "https://github.com/OathPros/txt2speech"
+  },
+  {
+    "id": "waymark-atlas",
+    "title": "Waymark Atlas",
+    "description": "Explore Ashenmere through an interactive fantasy atlas with connected map layers",
+    "category": "apps",
+    "topics": [
+      "Maps",
+      "Worldbuilding"
+    ],
+    "launch": "https://waymark-atlas-20261105.luke-gagliardi.workers.dev/?map=ashenmere&level=upper&variant=day",
+    "hosting": "cloudflare",
+    "featured": 4,
+    "preview": {
+      "path": "assets/previews/waymark-atlas.webp",
+      "alt": "Ashenmere map with buildings, rivers and linked locations in Waymark Atlas",
+      "width": 1090,
+      "height": 675
+    }
+  }
+]

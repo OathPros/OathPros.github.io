@@ -1,0 +1,13 @@
+# Local framework, working notes and browser evidence
+/.agents/
+/.devkit/
+/.github/agents/
+/references/
+/AGENTS.md
+/STATUS.md
+/DECISIONS.md
+/DEVKIT-FEEDBACK.md
+
+# Local tooling
+/.venv/
+__pycache__/
