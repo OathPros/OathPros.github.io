@@ -16,6 +16,8 @@
 [hidden] { display: none !important; }
 
 body {
+  position: relative;
+  isolation: isolate;
   margin: 0;
   color: var(--ink);
   background:
@@ -24,6 +26,34 @@ body {
     var(--ground);
   font-size: 16px;
   line-height: 1.5;
+}
+
+body::before, .index::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  aspect-ratio: 1;
+  background: center / contain no-repeat;
+  mask-image: radial-gradient(ellipse closest-side, #000 46%, transparent 100%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+body::before {
+  inset: -6rem max(0px, calc((100% - 1560px) / 2)) auto auto;
+  width: min(31rem, 84vw);
+  background-image: url("./backgrounds/cat-portrait.webp");
+  opacity: .23;
+}
+.index::before {
+  --portrait-offset: 2rem;
+  inset: var(--portrait-offset) 0 auto auto;
+  max-height: max(0px, calc(100% - var(--portrait-offset)));
+  width: min(38rem, 85vw);
+  background-image: url("./backgrounds/cat-closeup.webp");
+  opacity: .2;
+}
+@media (forced-colors: active) {
+  body::before, .index::before { display: none; }
 }
 
 h1, h2, h3, p { margin: 0; }
@@ -182,7 +212,7 @@ button, select { cursor: pointer; }
 .hit:focus-visible { outline: none; }
 .hit:focus-visible::after { outline: 2px solid var(--focus); outline-offset: -2px; }
 
-.index { margin-block: clamp(42px, 4vw, 72px) 64px; scroll-margin-top: 20px; }
+.index { position: relative; isolation: isolate; margin-block: clamp(42px, 4vw, 72px) 64px; scroll-margin-top: 20px; }
 .index-heading {
   display: flex;
   align-items: baseline;
@@ -283,6 +313,8 @@ button, select { cursor: pointer; }
 }
 
 @media (max-width: 500px) {
+  body::before { top: -1rem; opacity: .27; }
+  .index::before { --portrait-offset: 14rem; opacity: .17; }
   .masthead-inner { min-height: 56px; }
   .masthead .profile-link { display: none; }
   .intro { gap: 12px; padding-block: 31px 28px; }

@@ -16,6 +16,8 @@ Three concepts used the same real project content at 1440 and 390 pixels. The ar
 - Project titles are anchors with full-entry hit areas. Topic buttons and source links have their own focus and pointer targets. Filter changes update the result status and the shareable URL. A skipped-to index or main section receives normal browser focus.
 - Short transitions reinforce hover and focus, with motion disabled per preference. Image dimensions and the stage ratio hold space for a typographic fallback.
 
+- The two owner-supplied cat portraits sit behind the introduction and project index as softly faded decorative textures
+
 ## Interface copy and icons
 
 - Omit sentence-ending punctuation from homepage headings, labels, summaries, descriptions and status messages
